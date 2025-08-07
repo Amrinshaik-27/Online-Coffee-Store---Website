@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoffeeCraze - Online Coffee Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">CoffeeCraze</div>
+    <input type="text" id="searchInput" placeholder="Search coffee..." />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#offers">Offers</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="icons">
+      <button id="themeToggle">🌓</button>
+      <button id="cartBtn">🛒<span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <section id="home" class="full-screen">
+    <div class="home-content">
+      <h1 class="blinking">Welcome to CoffeeCraze ☕</h1>
+      <img src="https://media.tenor.com/ZLHSB31neKkAAAAi/coffee-cup.gif" alt="Animated Coffee Mug" class="mug-animation" />
+    </div>
+  </section>
+
+  
+  <!-- Offers Section -->
+<section id="offers" class="offers-section">
+  <h2 class="section-title">☕ Special Offers Just for You! ☕</h2>
+  <div class="offers-container">
+    <div class="offer-card">
+      <h3>🔥 Buy 1 Get 1 Free</h3>
+      <p>On all Espresso variants. Limited time only!</p>
+      <span class="offer-badge">Today Only</span>
+    </div>
+    <div class="offer-card">
+      <h3>💰 Flat 25% Off</h3>
+      <p>Use code <strong>BREW25</strong> on orders above ₹299.</p>
+      <span class="offer-badge">Use Now</span>
+    </div>
+    <div class="offer-card">
+      <h3>🎁 Free Mug</h3>
+      <p>Get a free mug on 5+ item orders from CoffeeCraze.</p>
+      <span class="offer-badge">Exclusive</span>
+    </div>
+  </div>
+</section>
+  
+  <section id="products">
+    <h2>Our Coffee Selection</h2>
+    <div id="productList" class="product-grid"></div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <h2 class="section-title">📬 Get in Touch with CoffeeCraze</h2>
+  <div class="contact-container">
+    <form class="contact-form" id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p><strong>Email:</strong> support@coffeecraze.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Location:</strong> Hyderabad, India</p>
+    </div>
+  </div>
+</section>
+  <div id="cartOverlay" class="hidden">
+    <div class="cart">
+      <span id="closeCart">✖</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <div id="totalAmount">Total: ₹0</div>
+      <button id="placeOrderBtn">Place Order</button>
+      <button id="payBillBtn">Pay Bill</button>
+    </div>
+  </div>
+
+  <button id="scrollTopBtn">⬆️</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
